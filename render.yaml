@@ -8,8 +8,8 @@ services:
     healthCheckPath: /health
     envVars:
       - key: SUPABASE_URL
-        sync: false
+        value: https://opfinsnajdbmbqtqfisv.supabase.co
       - key: SUPABASE_PUBLISHABLE_KEY
-        sync: false
+        value: sb_publishable_tq3wjX4fSLOrCu4V8jbViw_Sp9nDY7K
       - key: ALLOWED_ORIGIN
         value: https://boomek99.github.io
