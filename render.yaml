@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: planer-ucznia-librus-api
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements-render.txt
+    startCommand: gunicorn --workers 1 --threads 4 --bind 0.0.0.0:$PORT librus_api:app
+    healthCheckPath: /health
+    envVars:
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_PUBLISHABLE_KEY
+        sync: false
+      - key: ALLOWED_ORIGIN
+        value: https://boomek99.github.io
